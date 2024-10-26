@@ -1,0 +1,17 @@
+{
+  "server": {
+    "http_port": ":8083",
+    "ice_servers": ["stun:stun.l.google.com:19302"],
+    "ice_username": "",
+    "ice_credential": "",
+    "webrtc_port_min": 0,
+    "webrtc_port_max": 0
+  },
+  "streams": {
+    "H264_AAC": {
+      "on_demand": true,
+      "disable_audio": true,
+      "url": "rtsp://admin:Kitera123@192.168.27.93/Streaming/Channels/101"
+    }
+  }
+}
