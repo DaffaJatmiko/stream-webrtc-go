@@ -299,3 +299,16 @@ func (c *Config) handleRTSPStream(streamID string, url string, debug bool) error
 		c.BroadcastPacket(streamID, *packet)
 	}
 }
+
+// Tambahkan method di config.go
+func (c *Config) SyncStreamConfig(streamID string, url string, onDemand bool) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
+
+	c.Streams[streamID] = StreamConfig{
+		URL:      url,
+		Status:   true,
+		OnDemand: onDemand,
+		Viewers:  make(map[string]ViewerConfig),
+	}
+}

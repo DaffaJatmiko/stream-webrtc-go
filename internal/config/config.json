@@ -8,7 +8,7 @@
     "webrtc_port_max": 0
   },
   "streams": {
-    "H264_AAC": {
+    "Gerbang_Utama": {
       "on_demand": true,
       "disable_audio": true,
       "url": "rtsp://admin:Kitera123@192.168.27.93/Streaming/Channels/101"
